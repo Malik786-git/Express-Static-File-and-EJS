@@ -1,0 +1,42 @@
+Static file:
+CSS file js, img, video file etc are considered as static file in express.js
+
+to servve the static file, use express.static built-in middleware function in express
+
+Syntax: express.static(root, [options]);
+example: app.use(express.static('public'));
+localhost:300/css/style.css
+
+To create virtual path prefix for file that are served by the express.static, 
+
+app.use('/static', express.static(joni(process.cwd()+'public')))
+3000:/static/css/style.css
+
+
+optoins: second parameter of express.static
+
+const options = {
+    dotfile: 'ignore',
+    etag: false,
+    extension: ['htm', 'html'],
+    index: false,
+    maxAge: 'id'
+    redirect: false,
+    setHeader: function (res, path, stat){
+        re.set('x-timestamp, Date.now())
+    }
+    }
+
+app.use(express.static('public', options));
+
+details of dotfile
+"allow" - No special treatement for dotfile.
+"deny" - Deny a request for a dotfile, respond with 403, then call next()
+"ignore" - Act as file the dotfile does not exit, respond with 404, then call next()
+
+Note: default value is "ignore".
+
+
+see option img for more detail.
+
+

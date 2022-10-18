@@ -1,0 +1,27 @@
+Template Engire....
+
+A template engine enable yuou to use static template files in your application.
+
+At runtime, the template engine replaces variables, in a atemplate file with actual values, and transform the template into an HTML file send to the client.
+
+This approach makes it easier to design an HTML page..
+
+Popular Temp Engine... Ejs, Pug, Mustache, Nunjucks, Dust etc..
+
+Setup app for template engine...
+
+npm install ejs
+ - setup the directory where template file are located
+   => app.set('views', './views') // by default it set, but if we change folder, so we need to mention where fie path.
+
+ - for use => app.set('view engine', 'ejs')
+
+
+- Whan you make a request to the home page, the index.ejs file will be rendered as HTML.. we use render() method;
+
+res.render() - It renders a view and send the rendered HTML string to the client.
+Syntax: re.render(view[, locals][, callback])
+
+
+
+

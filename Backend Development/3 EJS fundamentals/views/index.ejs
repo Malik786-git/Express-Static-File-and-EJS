@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>EJS Template Engine...</h1>
+
+    <h2>
+      <%= %>
+      <!-- disply local variable / display data -->
+      <%= name%>
+      <!-- /////////////////////////////////////////////// -->
+      <br />
+      <!-- creating variable i and display  -->
+      <% var i = 10; %> 
+      <%= i%>
+      <!-- comments -->
+      <%# this is comments, not render in html %>
+      <!-- /////////////////////////////////////////////// -->
+      <br />
+      <!-- if -->
+      <!-- opening if statement -->
+      <% if(name) { %> 
+        Hello! <%=name %>
+        <!-- closing if statement -->
+      <% } %>
+      <!-- /////////////////////////////////////////////// -->
+      <br />
+      <!-- if/else -->
+      <% if(id ==10) { %> 
+        Hello! <%=name %> 
+        <% } else { %> 
+            plz enter correct id
+      <% } %>
+      <!-- /////////////////////////////////////////////// -->
+      <br />
+       <!-- for loop -->
+       <% for(i=0; i<=4; i++) { %>
+         ( <%= i+1 %> )
+          <%= marks[i] %>
+       <% } %>
+        
+  <!-- /////////////////////////////////////////////// -->
+      <br />
+       <!-- for in loop -->
+       <% for(const key in marks) { %>
+          <%= marks[key] %>
+       <% } %>
+        
+ <!-- /////////////////////////////////////////////// -->
+      <br />
+       <!-- for of loop -->
+       <% for(const val of marks) { %>
+          <%= val %>
+       <% } %>
+
+         <!-- /////////////////////////////////////////////// -->
+      <br />
+       <!-- while loop -->
+       <% let j =0 %>
+       <% while(j<=4) { %>
+          heloo
+          <% j++ %>
+       <% } %>
+        
+   <!-- /////////////////////////////////////////////// -->
+      <br />
+       <!-- forEach loop -->
+       
+       <% marks.forEach((value)=>{ %>
+            <%= value %>
+       <% }) %>
+        
+ <!-- /////////////////////////////////////////////// -->
+      <br />
+       <!-- funtion call -->
+       <% var current = new Date(); %>
+        <%= current %>
+    </h2>
+    
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      
+
+
+
+
+  </body>
+</html>
