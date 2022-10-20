@@ -1,0 +1,51 @@
+Middleware...
+Middleware functions are functions that have access to the req obj, res obj, 
+and thenext function in the application's request-response cycle.
+
+Perform Task with Middleware
+- Execute any code. 
+- Make changes to the request and the respoonse object
+- End the request-response cycle
+- Call the next Middleware in the stack
+
+
+-------------------------------------------------------------
+creating Middleware
+
+
+app.js 
+   app.use(function(req, res){
+        console.log('logged);  // this function is middleware 
+        next();
+   })
+
+
+// but practically we create seperate directory for our middleware...
+
+
+-------------------------------------------------------------
+
+Using middleware..
+
+a) Application level middleware
+b) Route level middleware
+  
+-------------------------------------------------------------
+
+Built in Middleware
+
+express.static : served assets
+express.json : parse json 
+etc..
+
+
+Third party middleware
+
+npm install cookiew-parser
+etc...
+
+
+
+For more..
+https://expressjs.com/en/resources/middleware.html
+
